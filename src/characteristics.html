@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Характеристи</title>
+	<script src="js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/hero.js"></script>
+	<script src="js/characteristics.js"></script>
+</head>
+
+<body>
+	<main class="game">
+		<!--Навигация-->
+		<nav class="main-nav">
+			<ul class="main-nav__list">
+				<li class="main-nav__item">
+					<a href="javascript: void(0);" class="main-nav__link main-nav__link_activated characteristics">Характеристи</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="training.html" class="main-nav__link training">Тренировка</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="arena.html" class="main-nav__link arena">Арена</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="shop.html" class="main-nav__link shop">Магазин</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="journey.html" class="main-nav__link journey">Путешествие</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="inventory.html" class="main-nav__link inventory">Инвентарь</a>
+				</li>
+			</ul>
+		</nav>
+		<!--Игровая область-->
+		<section class="game-window">
+			<h2 class="visually-hidden">Характеристи</h2>
+
+			<ul class="characteristics__list">
+				<li class="characteristics__item">
+					<h2>Характеристики</h2>
+				</li>
+
+				<li class="characteristics__item nameHero" alt="Имя великого героя!">
+					<span>Имя :</span>
+					<input type="text" value="" class="name initStr" stat="name">
+				</li>
+
+				<li class="characteristics__item strengthHero" alt="Сила – определяет атаку и максимальное количество здоровья героя.">
+					<span>Сила :</span>
+
+					<button class="button remove" type="button" stat="strength">
+						<span class="visually-hidden">Уменьшить силу</span>
+					</button>
+
+					<input type="text" value="" class="initInt" disabled>
+
+					<button class="button add" type="button" stat="strength">
+						<span class="visually-hidden">Прибавить силу</span>
+					</button>
+				</li>
+
+				<li class="characteristics__item agilityHero" alt="Ловкость – определяет броню героя.">
+					<span>Ловкость :</span>
+
+					<button class="button remove" type="button" stat="agility">
+						<span class="visually-hidden">Уменьшить ловкость</span>
+					</button>
+
+					<input type="text" value="" class="initInt" disabled>
+
+					<button class="button add" type="button" stat="agility">
+						<span class="visually-hidden">Прибавить ловкость</span>
+					</button>
+				</li>
+
+				<li class="characteristics__item intellectHero visually-hidden" alt="Интеллект – определяет максимальное количество маны, а так же магический урон героя.">
+					<span>Интеллект :</span>
+
+					<button class="button remove" type="button" stat="intellect">
+						<span class="visually-hidden">Уменьшить интеллект</span>
+					</button>
+
+					<input type="text" value="" class="initInt" disabled>
+
+					<button class="button add" type="button" stat="intellect">
+						<span class="visually-hidden">Прибавить интеллект</span>
+					</button>
+				</li>
+
+				<li class="characteristics__item" alt="Свободные очки – это уникальные очки которые можно получить за повышение уровня героя. Ими можно увеличить характеристики, такие как: cила и ловкость.">
+					<!--				<li class="characteristics__item" alt="Свободные очки – это уникальные очки которые можно получить за повышение уровня героя. Ими можно увеличить характеристики, такие как: cила, ловкость и интеллект.">-->
+					<span>Свободные очки :</span>
+					<input type="text" value="" class="point initStr" stat="point" disabled>
+				</li>
+			</ul>
+
+			<p class="info">Характеристики – это совокупность всех атрибутов, параметров героя, которые определяют наносимый им урон, максимальное количество здоровья, количество очков брони. Таких атрибутов (характеристик) две: сила и ловкость. Они увеличиваются с повышением уровня героя, а также после покупок некоторых предметов.</p>
+
+			<!--			<p class="info">Характеристики – это совокупность всех атрибутов, параметров героя, которые определяют наносимый им урон, максимальное количество здоровья и маны, количество очков брони. Таких атрибутов (характеристик) три: сила, ловкость и интеллект. Они увеличиваются с повышением уровня героя, а также после покупок некоторых предметов.</p>-->
+		</section>
+		<!--Строка опыта-->
+		<div class="level-bar">
+			<div class="experience"></div>
+			<div class="band"><span class="band-now"></span>/<span class="band-max"></span></div>
+			<div class="level"></div>
+			<a href="index.html" class="back_right">
+				<svg class="svg-back" version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+					<path d="M228 138V92a26 26 0 0 0-41-21L10 192a23 23 0 0 0 0 39l177 123a26 26 0 0 0 41-22v-38c94 3 175 50 222 122 5 8 16 12 26 9 9-2 16-11 16-21v-3c0-143-117-259-264-263z" />
+				</svg>
+			</a>
+		</div>
+	</main>
+</body>
+
+</html>

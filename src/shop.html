@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Магазин</title>
+	<script src="js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/hero.js"></script>
+	<script src="js/characteristics.js"></script>
+	<script src="js/shop.js"></script>
+</head>
+
+<body>
+	<main class="game">
+		<!--Навигация-->
+		<nav class="main-nav">
+			<ul class="main-nav__list">
+				<li class="main-nav__item">
+					<a href="characteristics.html" class="main-nav__link characteristics">Характеристи</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="training.html" class="main-nav__link training">Тренировка</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="arena.html" class="main-nav__link arena">Арена</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="javascript: void(0);" class="main-nav__link main-nav__link_activated shop">Магазин</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="journey.html" class="main-nav__link journey">Путешествие</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="inventory.html" class="main-nav__link inventory">Инвентарь</a>
+				</li>
+			</ul>
+		</nav>
+		<!--Игровая область-->
+		<section class="game-window">
+			<h2 class="visually-hidden">Магазин</h2>
+
+			<div class="inventories">
+				<ul class="inventories_list">
+					<li class="inventories_item helm">
+						<img src="img/clothes/helm/helm_0.png" alt="helm">
+						<img src="img/clothes/helm/helm_1.png" alt="helm">
+						<img src="img/clothes/helm/helm_2.png" alt="helm">
+						<img src="img/clothes/helm/helm_3.png" alt="helm">
+						<img src="img/clothes/helm/helm_4.png" alt="helm">
+						<img src="img/clothes/helm/helm_5.png" alt="helm">
+					</li>
+					<li class="inventories_item chest">
+						<img src="img/clothes/chest/chest_0.png" alt="chest">
+						<img src="img/clothes/chest/chest_1.png" alt="chest">
+						<img src="img/clothes/chest/chest_2.png" alt="chest">
+						<img src="img/clothes/chest/chest_3.png" alt="chest">
+						<img src="img/clothes/chest/chest_4.png" alt="chest">
+						<img src="img/clothes/chest/chest_5.png" alt="chest">
+					</li>
+					<li class="inventories_item belt">
+						<img src="img/clothes/belt/belt_0.png" alt="belt">
+						<img src="img/clothes/belt/belt_1.png" alt="belt">
+						<img src="img/clothes/belt/belt_2.png" alt="belt">
+						<img src="img/clothes/belt/belt_3.png" alt="belt">
+						<img src="img/clothes/belt/belt_4.png" alt="belt">
+						<img src="img/clothes/belt/belt_5.png" alt="belt">
+					</li>
+					<li class="inventories_item pants">
+						<img src="img/clothes/pants/pants_1.png" alt="pants">
+						<img src="img/clothes/pants/pants_2.png" alt="pants">
+						<img src="img/clothes/pants/pants_3.png" alt="pants">
+						<img src="img/clothes/pants/pants_0.png" alt="pants">
+						<img src="img/clothes/pants/pants_4.png" alt="pants">
+						<img src="img/clothes/pants/pants_5.png" alt="pants">
+					</li>
+					<li class="inventories_item boots">
+						<img src="img/clothes/boots/boots_0.png" alt="boots">
+						<img src="img/clothes/boots/boots_1.png" alt="boots">
+						<img src="img/clothes/boots/boots_2.png" alt="boots">
+						<img src="img/clothes/boots/boots_3.png" alt="boots">
+						<img src="img/clothes/boots/boots_4.png" alt="boots">
+						<img src="img/clothes/boots/boots_5.png" alt="boots">
+					</li>
+					<li class="inventories_item shield">
+						<img src="img/clothes/shield/shield_0.png" alt="shield">
+						<img src="img/clothes/shield/shield_1.png" alt="shield">
+						<img src="img/clothes/shield/shield_2.png" alt="shield">
+						<img src="img/clothes/shield/shield_3.png" alt="shield">
+						<img src="img/clothes/shield/shield_4.png" alt="shield">
+						<img src="img/clothes/shield/shield_5.png" alt="shield">
+					</li>
+					<li class="inventories_item sword">
+						<img src="img/clothes/sword/sword_0.png" alt="sword">
+						<img src="img/clothes/sword/sword_1.png" alt="sword">
+						<img src="img/clothes/sword/sword_2.png" alt="sword">
+						<img src="img/clothes/sword/sword_3.png" alt="sword">
+						<img src="img/clothes/sword/sword_4.png" alt="sword">
+						<img src="img/clothes/sword/sword_5.png" alt="sword">
+					</li>
+				</ul>
+			</div>
+
+			<div class="shops">
+				<ul class="shops_list">
+					<li class="shops_item">
+						<img class="selected-item" src="img/clothes/sword/sword_0.png" width="64" height="64" alt="sword">
+					</li>
+
+					<li class="shops_item">
+						<ul class="parameters_list">
+							<li class="parameters_item">
+								<span class="parameters_health">Здоровье :</span>
+								<span class="parameters_health-value"></span>
+							</li>
+							<li class="parameters_item">
+								<span class="parameters_attack">Атака :</span>
+								<span class="parameters_attack-value"></span>
+							</li>
+							<li class="parameters_item">
+								<span class="parameters_armor">Броня :</span>
+								<span class="parameters_armor-value"></span>
+							</li>
+						</ul>
+					</li>
+
+					<li class="shops_item">
+						<div class="level-needed">
+							<span class="level-needed_text">Нужен уровень :</span>
+							<span class="level-needed_value"></span>
+						</div>
+					</li>
+
+					<li class="shops_item">
+						<div class="to-acquire" cost="0">
+							<div class="to-acquire_value"><img class="coin-gold" src="img/gold_coin_small.png" width="8" height="8" alt="Деньги"></div>
+							<span class="to-acquire_text">Купить</span>
+						</div>
+						
+						<div class="purchased">
+							<span class="purchased_text">Куплено</span>
+						</div>
+						
+					</li>
+
+					<li class="shops_item">
+						<div class="moneyTraining">
+							<div class="moneyTrai">
+								<img class="coin-gold" src="img/gold_coin_small.png" width="8" height="8" alt="Деньги">
+								<span class="current-coins"></span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--Строка опыта-->
+		<div class="level-bar">
+			<div class="experience"></div>
+			<div class="band"><span class="band-now"></span>/<span class="band-max"></span></div>
+			<div class="level">0</div>
+			<a href="index.html" class="back_right">
+				<svg class="svg-back" version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+					<path d="M228 138V92a26 26 0 0 0-41-21L10 192a23 23 0 0 0 0 39l177 123a26 26 0 0 0 41-22v-38c94 3 175 50 222 122 5 8 16 12 26 9 9-2 16-11 16-21v-3c0-143-117-259-264-263z" />
+				</svg>
+			</a>
+		</div>
+	</main>
+</body>
+
+</html>

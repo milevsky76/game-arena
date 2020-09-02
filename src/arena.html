@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Арена</title>
+	<script src="js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/hero.js"></script>
+	<script src="js/characteristics.js"></script>
+	<script src="js/arena.js"></script>
+</head>
+
+<body>
+	<main class="game">
+		<!--Навигация-->
+		<nav class="main-nav">
+			<ul class="main-nav__list">
+				<li class="main-nav__item">
+					<a href="characteristics.html" class="main-nav__link characteristics">Характеристи</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="training.html" class="main-nav__link training">Тренировка</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="javascript: void(0);" class="main-nav__link main-nav__link_activated arena">Арена</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="shop.html" class="main-nav__link shop">Магазин</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="journey.html" class="main-nav__link journey">Путешествие</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="inventory.html" class="main-nav__link inventory">Инвентарь</a>
+				</li>
+			</ul>
+		</nav>
+		<!--Игровая область-->
+		<section class="game_arena">
+			<h2 class="visually-hidden">Game</h2>
+
+			<div class="game_item_left">
+				<p class="arena-name">Игрок</p>
+
+				<div class="hp-bar">
+					<div class="experience"></div>
+					<div class="band"><span class="band-now"></span>/<span class="band-max"></span></div>
+				</div>
+
+				<div class="arena-buttons">
+					<button class="button_attack" type="button" stat="attackHead" value="0">
+						<svg class="svg-attack" xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 512 512">
+							<path d="M13 435a45 45 0 0 0 64 64l111-111 32 32c5 6 15 6 21 0l42-43c6-5 6-15 0-21l-8-8 205-209c2-2 4-4 4-7l28-114a15 15 0 0 0-19-18L381 29c-2 1-5 2-6 4L165 238l-9-9c-6-6-15-6-21 0l-43 42c-6 6-6 16 0 22l32 31L13 435zm21 43c-5-6-5-16 0-22l23-22 21 22-22 22c-6 6-16 6-22 0zm68-89l21 22-24 23-21-21 24-24zM393 57l84-21-21 85-203 205-23-23 158-157a15 15 0 0 0-22-22L209 282l-23-23L393 57zM145 261l53 53 53 53-21 21-106-106 21-21zm22 106l-23 22-21-21 22-22 22 21z" />
+						</svg>
+						<span class="attack-head">Атака в голову</span>
+					</button>
+
+					<button class="button_protection" type="button" stat="protectionHead" value="0">
+						<svg class="svg-protection" version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 737 737">
+							<path d="M674 124c0-10-7-19-17-20-45-6-90-17-134-33S431 32 378 3c-6-4-12-4-19 0-52 29-100 52-144 68s-89 27-134 33c-10 1-17 10-18 20-4 185 36 337 121 454 47 65 105 117 175 157 5 4 14 3 20 0 70-41 128-93 174-157a729 729 0 0 0 121-454zM520 556c-40 55-90 102-151 139-61-37-112-84-152-139a683 683 0 0 1-114-415c43-7 85-18 127-34 43-15 89-37 139-64 50 27 95 49 138 64 42 16 85 27 127 34 2 170-36 308-114 415z" />
+						</svg>
+						<span class="protection-head">Защитить голову</span>
+					</button>
+				</div>
+
+				<div class="arena-buttons">
+					<button class="button_attack" type="button" stat="attackBody" value="1">
+						<svg class="svg-attack" xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 512 512">
+							<path d="M13 435a45 45 0 0 0 64 64l111-111 32 32c5 6 15 6 21 0l42-43c6-5 6-15 0-21l-8-8 205-209c2-2 4-4 4-7l28-114a15 15 0 0 0-19-18L381 29c-2 1-5 2-6 4L165 238l-9-9c-6-6-15-6-21 0l-43 42c-6 6-6 16 0 22l32 31L13 435zm21 43c-5-6-5-16 0-22l23-22 21 22-22 22c-6 6-16 6-22 0zm68-89l21 22-24 23-21-21 24-24zM393 57l84-21-21 85-203 205-23-23 158-157a15 15 0 0 0-22-22L209 282l-23-23L393 57zM145 261l53 53 53 53-21 21-106-106 21-21zm22 106l-23 22-21-21 22-22 22 21z" />
+						</svg>
+						<span class="attack-head">Атака в корпус</span>
+					</button>
+
+					<button class="button_protection" type="button" stat="protectionBody" value="1">
+						<svg class="svg-protection" version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 737 737">
+							<path d="M674 124c0-10-7-19-17-20-45-6-90-17-134-33S431 32 378 3c-6-4-12-4-19 0-52 29-100 52-144 68s-89 27-134 33c-10 1-17 10-18 20-4 185 36 337 121 454 47 65 105 117 175 157 5 4 14 3 20 0 70-41 128-93 174-157a729 729 0 0 0 121-454zM520 556c-40 55-90 102-151 139-61-37-112-84-152-139a683 683 0 0 1-114-415c43-7 85-18 127-34 43-15 89-37 139-64 50 27 95 49 138 64 42 16 85 27 127 34 2 170-36 308-114 415z" />
+						</svg>
+						<span class="protection-head">Защитить корпус</span>
+					</button>
+				</div>
+
+				<div class="arena-buttons">
+					<button class="button_attack" type="button" stat="attackLegs" value="2">
+						<svg class="svg-attack" xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 512 512">
+							<path d="M13 435a45 45 0 0 0 64 64l111-111 32 32c5 6 15 6 21 0l42-43c6-5 6-15 0-21l-8-8 205-209c2-2 4-4 4-7l28-114a15 15 0 0 0-19-18L381 29c-2 1-5 2-6 4L165 238l-9-9c-6-6-15-6-21 0l-43 42c-6 6-6 16 0 22l32 31L13 435zm21 43c-5-6-5-16 0-22l23-22 21 22-22 22c-6 6-16 6-22 0zm68-89l21 22-24 23-21-21 24-24zM393 57l84-21-21 85-203 205-23-23 158-157a15 15 0 0 0-22-22L209 282l-23-23L393 57zM145 261l53 53 53 53-21 21-106-106 21-21zm22 106l-23 22-21-21 22-22 22 21z" />
+						</svg>
+						<span class="attack-head">Атака в ноги</span>
+					</button>
+
+					<button class="button_protection" type="button" stat="protectionLegs" value="2">
+						<svg class="svg-protection" version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 737 737">
+							<path d="M674 124c0-10-7-19-17-20-45-6-90-17-134-33S431 32 378 3c-6-4-12-4-19 0-52 29-100 52-144 68s-89 27-134 33c-10 1-17 10-18 20-4 185 36 337 121 454 47 65 105 117 175 157 5 4 14 3 20 0 70-41 128-93 174-157a729 729 0 0 0 121-454zM520 556c-40 55-90 102-151 139-61-37-112-84-152-139a683 683 0 0 1-114-415c43-7 85-18 127-34 43-15 89-37 139-64 50 27 95 49 138 64 42 16 85 27 127 34 2 170-36 308-114 415z" />
+						</svg>
+						<span class="protection-head">Защитить ноги</span>
+					</button>
+				</div>
+
+				<button class="button_step" type="button" stat="toStep">Сделать ход</button>
+			</div>
+
+			<div class="game_item_right">
+				<p class="arena-name">Компьютер</p>
+				<div class="hp-bar">
+					<div class="experience"></div>
+					<div class="band"><span class="band-now"></span>/<span class="band-max"></span></div>
+				</div>
+			</div>
+
+			<div class="game_item_info">
+				Результат арены
+			</div>
+		</section>
+		<!--Строка опыта-->
+		<div class="level-bar">
+			<div class="experience"></div>
+			<div class="band"><span class="band-now"></span>/<span class="band-max"></span></div>
+			<div class="level">0</div>
+			<a href="index.html" class="back_right">
+				<svg class="svg-back" version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+					<path d="M228 138V92a26 26 0 0 0-41-21L10 192a23 23 0 0 0 0 39l177 123a26 26 0 0 0 41-22v-38c94 3 175 50 222 122 5 8 16 12 26 9 9-2 16-11 16-21v-3c0-143-117-259-264-263z" />
+				</svg>
+			</a>
+		</div>
+	</main>
+</body>
+
+</html>

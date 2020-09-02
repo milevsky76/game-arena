@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Путешествие</title>
+	<script src="js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/hero.js"></script>
+	<script src="js/characteristics.js"></script>
+	<script src="js/journey.js"></script>
+</head>
+
+<body>
+	<main class="game">
+		<!--Навигация-->
+		<nav class="main-nav">
+			<ul class="main-nav__list">
+				<li class="main-nav__item">
+					<a href="characteristics.html" class="main-nav__link characteristics">Характеристи</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="training.html" class="main-nav__link training">Тренировка</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="arena.html" class="main-nav__link arena">Арена</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="shop.html" class="main-nav__link shop">Магазин</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="javascript: void(0);" class="main-nav__link main-nav__link_activated journey">Путешествие</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="inventory.html" class="main-nav__link inventory">Инвентарь</a>
+				</li>
+			</ul>
+		</nav>
+		<!--Игровая область-->
+		<section class="game-window">
+			<h2 class="visually-hidden">Путешествие</h2>
+
+			<p class="journeys" accepted="" currentquest=""></p>
+
+			<div class="journeys-buttons">
+				<button class="journeys-f" type="button">
+					<span class="journeys-f-text"></span>
+				</button>
+
+				<button class="journeys-t" type="button">
+					<span class="journeys-t-text"></span>
+				</button>
+			</div>
+		</section>
+		<!--Строка опыта-->
+		<div class="level-bar">
+			<div class="experience"></div>
+			<div class="band"><span class="band-now"></span>/<span class="band-max"></span></div>
+			<div class="level"></div>
+			<a href="index.html" class="back_right">
+				<svg class="svg-back" version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+					<path d="M228 138V92a26 26 0 0 0-41-21L10 192a23 23 0 0 0 0 39l177 123a26 26 0 0 0 41-22v-38c94 3 175 50 222 122 5 8 16 12 26 9 9-2 16-11 16-21v-3c0-143-117-259-264-263z" />
+				</svg>
+			</a>
+		</div>
+	</main>
+</body>
+
+</html>
